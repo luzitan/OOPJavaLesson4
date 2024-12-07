@@ -16,28 +16,28 @@ public class Program {
         john.addChild(susan);
         mary.addChild(susan);
 // Добавляем людей в древо
-        familyTree.addPerson(john);
-        familyTree.addPerson(mary);
-        familyTree.addPerson(susan);
-
+//        familyTree.addPerson(john);
+//        familyTree.addPerson(mary);
+//        familyTree.addPerson(susan);
+//
 //        // Iterator
 //        for (var people: familyTree) {
 //            System.out.println(people);
 //        }
-        Service service = new Service();
-        service.addPerson("Паша", 19);
-        service.addPerson("Даша", 60);
-        service.addPerson("Витя", 55);
-        service.addPerson("Юля", 20);
-        System.out.println(service.familyTreeInfo());
-
-        service.sortByName();
-        System.out.println("Сортировка по имени:");
-        System.out.println(service.familyTreeInfo());
-
-        service.sortByBirthYear();
-        System.out.println("Сортировка по году рождения:");
-        System.out.println(service.familyTreeInfo());
+//        Service service = new Service();
+//        service.addPerson("Паша", 19);
+//        service.addPerson("Даша", 60);
+//        service.addPerson("Витя", 55);
+//        service.addPerson("Юля", 20);
+//        System.out.println(service.familyTreeInfo());
+//
+//        service.sortByName();
+//        System.out.println("Сортировка по имени:");
+//        System.out.println(service.familyTreeInfo());
+//
+//        service.sortByBirthYear();
+//        System.out.println("Сортировка по году рождения:");
+//        System.out.println(service.familyTreeInfo());
 
 
 
@@ -68,11 +68,11 @@ public class Program {
 //            }
 //        }
 
-//        // Пример получения всех детей Джона
-//        List<Person> johnsChildren = familyTree.getChildren(john);
-//        for (Person child : johnsChildren) {
-//            System.out.println("Дети John's: " + child.getName());
-//        }
+        // Пример получения всех детей Джона
+        List<Person> johnsChildren = familyTree.getChildren(john);
+        for (Person child : johnsChildren) {
+            System.out.println("Дети John's: " + child.getName());
+        }
 
 
     }

@@ -4,20 +4,20 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-class FamilyTree implements Serializable, Iterable<Person> {
+class FamilyTree<T extends StudyPerson> implements Serializable, Iterable<T> {
     private static final long serialVersionUID = 1L;
-    private List<Person> people;
+    private List<T> people;
     public FamilyTree() {
         this.people = new ArrayList<>();
     }
-    public void addPerson(Person person) {
+    public void addPerson(T person) {
         this.people.add(person);
     }
-    public List<Person> getChildren(Person parent) {
+    public List<T> getChildren(T parent) {
         return parent.getChildren();
     }
-    public Person findPersonByName(String name) {
-        for (Person person : people) {
+    public T findPersonByName(String name) {
+        for (T person : people) {
             if (person.getName().equals(name)) {
                 return person;
             }
@@ -25,12 +25,12 @@ class FamilyTree implements Serializable, Iterable<Person> {
         return null;
     }
 
-    public List<Person> getPeople() {
+    public List<T> getPeople() {
         return people;
     }
 
     @Override
-    public Iterator<Person> iterator() {
+    public Iterator<T> iterator() {
         return new FamilyTreeIterator(people);
     }
 
